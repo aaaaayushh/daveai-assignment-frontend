@@ -28,7 +28,7 @@ function App() {
 
   const handleNewSize = (e) => {
     e.preventDefault();
-    axios.post(`http://${process.env.REACT_APP_SERVER}/measurements`, { height:height,weight:weight,age:age,waist:newMeasurement })
+    axios.post(`https://${process.env.REACT_APP_SERVER}/measurements`, { height:height,weight:weight,age:age,waist:newMeasurement })
     .then(res => {
       setWaistMeasurements([...waistMeasurements, newMeasurement]);
       setSelectedMeasurement(newMeasurement);
